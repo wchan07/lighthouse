@@ -1,0 +1,6 @@
+<div class="typeahead-wrapper">
+  <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="search()" #textInput>
+  <ul class="results-list" *ngIf="results && results.length">
+    <li *ngFor="let item of results" (click)="selectOption(item)">{{ item.name }}</li>
+  </ul>
+</div>

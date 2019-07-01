@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Lighthouse Employee browser
+  </h1>
+
+  <div>
+    <input id="preview" type="file" (change)="openCsv($event)" />
+    <div *ngIf="dataSet && dataSet.data && dataSet.data.length">
+      <app-typeahead [searchList]="dataSet ? dataSet.data : []" (selectedItem)="onSelect($event)">
+
+      </app-typeahead>
+    </div>
+  </div>
+
+  <div *ngIf="selectedEmployee">
+    {{ printSelected() }}
+  </div>
+</div>

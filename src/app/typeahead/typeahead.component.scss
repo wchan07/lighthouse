@@ -1,0 +1,15 @@
+.typeahead-wrapper {
+  border: 1px solid black;
+  position: relative;
+
+  .results-list {
+    border: 1px solid blue;
+
+    list-style: none;
+    position: relative;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}
